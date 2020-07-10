@@ -4,9 +4,9 @@ def isOpen(ip,port):
    try:
       s.connect((ip, int(port)))
       s.shutdown(2)
-      print(ip + " " + str(port) + " " + "True")
+      print("{}, {}, True".format(ip, port))
    except:
-      print(ip + " " + str(port) + " " + "False")
+      print("{}, {}, False".format(ip, port))
 
 with open("serverlist.txt") as serverlist:
     for line in serverlist:
